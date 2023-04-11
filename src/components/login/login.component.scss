@@ -1,0 +1,23 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 60px);
+
+  &-container {
+    & h2 {
+      text-align: center;
+    }
+
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 7px 25px rgba(0 0 0 /8%);
+    border-radius: 8px;
+
+    &-form-group {
+      margin-bottom: 12px;
+    }
+  }
+}
