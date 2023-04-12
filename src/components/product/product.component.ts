@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { products } from 'src/data';
+import { AuthState } from 'src/store/auth.service';
 import { CartState } from 'src/store/cart.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { CartState } from 'src/store/cart.service';
 export class ProductComponent implements OnInit {
   products = products;
   count = 1;
-  constructor(private cartState: CartState) {}
+  constructor(private cartState: CartState, private authState: AuthState) {}
 
   ngOnInit(): void {}
 
@@ -33,5 +34,9 @@ export class ProductComponent implements OnInit {
     this.cartState.cartSubJect.next({
       cart: [...this.cartState.cartSubJect.value?.cart],
     });
+  }
+
+  forkSetToken() {
+    this.authState.reducer.setToken('456');
   }
 }

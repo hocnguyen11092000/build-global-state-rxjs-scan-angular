@@ -16,12 +16,12 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.userName && this.passWord) {
-      this.authState.executeAction('STORE_USER_ACTTION', {
-        user: {
-          userName: this.userName,
-          passWord: this.passWord,
-        },
+      this.authState.reducer.storeUser({
+        user: this.userName,
+        passWord: this.passWord,
       });
+
+      this.authState.reducer.setToken('123');
 
       this.router.navigateByUrl('/');
     }

@@ -12,10 +12,10 @@ export class HeaderComponent implements OnInit {
   user: IAuthState = {};
 
   ngOnInit(): void {
-    this.globalStateService.getState().subscribe((val) => {
+    this.globalStateService?.getSingleState('auth')?.subscribe((val) => {
       console.log(val);
 
-      this.user = val?.auth || {};
+      this.user = val || {};
     });
   }
 }
