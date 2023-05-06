@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, scan } from 'rxjs';
+import { BehaviorSubject, scan } from 'rxjs';
 
 export interface IAuthState {
   user?: {
@@ -9,12 +9,6 @@ export interface IAuthState {
 
   token?: string | null;
 }
-
-export const STORE_USER_ACTON: any = {
-  TYPE: 'STORE_USER_ACTTION',
-  PAYLOAD: null,
-};
-
 @Injectable({
   providedIn: 'root',
 })

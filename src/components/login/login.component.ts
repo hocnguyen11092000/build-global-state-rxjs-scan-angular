@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.userName && this.passWord) {
       this.authState.reducer.storeUser({
-        user: this.userName,
+        userName: this.userName,
         passWord: this.passWord,
       });
 

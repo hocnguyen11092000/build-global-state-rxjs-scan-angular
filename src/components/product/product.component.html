@@ -9,7 +9,7 @@
           {{ product?.name || "" }}
         </div>
         <div class="product-item-price">
-          {{ product?.price || "" }}
+          {{ (product?.price || "") + " $" }}
         </div>
         <div>
           <input type="text" [(ngModel)]="count" />
@@ -21,4 +21,4 @@
     </ng-container>
   </ng-container>
 </div>
-<button (click)="forkSetToken()">fork set token</button>
+<!-- <button (click)="forkSetToken()">fork set token</button> -->

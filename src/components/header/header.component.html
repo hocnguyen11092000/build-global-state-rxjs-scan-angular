@@ -2,8 +2,8 @@
   <div class="title">shop</div>
   <div style="display: flex; gap: 12px; align-items: center">
     <button [routerLink]="'/login'">login</button>
-    {{ user | json }}
+    {{ user.user?.userName || "" }}
     <br />
-    <div class="count-cart">0</div>
+    <div class="count-cart">{{ count }}</div>
   </div>
 </div>
